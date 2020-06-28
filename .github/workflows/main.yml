@@ -25,6 +25,7 @@ jobs:
            commands: |
              sudo cd  $repo-source
              sudo git pull
+             sudo chmod +x script.sh
              sudo ./script.sh
 
 
