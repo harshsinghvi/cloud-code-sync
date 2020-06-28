@@ -8,7 +8,7 @@ on:
   push:
     branches: [ master ]
 env:
-  repo-source: ${{secret.REPO_SOURCE}}
+  repo-source: ${{secrets.REPO_SOURCE}}
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
