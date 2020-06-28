@@ -24,7 +24,7 @@ jobs:
            user: ${{ secrets.SSH_USER }}
            password: ${{ secrets.SSH_PASSWORD }}
            commands: |
-             sudo cd  ${{secrets.REPO_SOURCE}}
+             cd  ${{secrets.REPO_SOURCE}}
              sudo git pull
              sudo chmod +x script.sh
              sudo ./script.sh
