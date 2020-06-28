@@ -7,13 +7,14 @@ name: code-sync
 on:
   push:
     branches: [ master ]
-env:
-  repo-source: ${{secrets.REPO_SOURCE}}
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   sync:
     runs-on: ubuntu-latest
+    env:
+     repo-source: ${{secrets.REPO_SOURCE}}
     steps:
         - uses: actions/checkout@v2
         - name: Run a command remotely
